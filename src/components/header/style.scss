@@ -1,0 +1,74 @@
+@import 'Style/classes/section.scss';
+@import 'Components/animated-burger.scss';
+@import 'Components/modal/style.scss';
+
+.header {
+  background: white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+
+.header__body {
+  @extend .section;
+  min-height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  max-width: 7em;
+  min-height: 2em;
+  object-fit: contain;
+}
+
+.header__soc-links {
+  display: flex;
+  column-gap: 10px;
+}
+
+
+
+@media (max-width: 1023px) {
+  .header__burger {
+    @include animated-burger(32px, 28px, 3px, 9px);
+    z-index: 1000;
+
+    &--opened {
+      position: fixed;
+      right: 5%;
+      top: calc(2em - 16px);
+    }
+  }
+
+  .header--modal {
+    @include modal-blur;
+  }
+
+  .header__nav {
+    @include modal-body;
+  }
+
+  .header__soc-links {
+    margin-top: 25px;
+    padding: 0 25px;
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .header__logo-link {
+    max-width: 8em;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-grow: 1;
+  }
+}

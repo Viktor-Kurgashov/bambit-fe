@@ -1,0 +1,26 @@
+@mixin modal-blur {
+  &::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@mixin modal-body {
+  transition: transform .3s;
+  transform: translateX(100%);
+  background: white;
+  position: fixed;
+  z-index: 300;
+  right: 0;
+  top: 0;
+  width: min(80%, 350px);
+  min-height: 100vh;
+  padding: 6em 0 2em;
+  display: none;
+}

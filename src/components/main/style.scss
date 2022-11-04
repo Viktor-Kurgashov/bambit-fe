@@ -1,0 +1,35 @@
+.main {
+  background: url('./main-bg.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: calc(100vh - 8.5em); // отнять высоту футера и хедера
+  padding: 5em 0;
+}
+
+.main__body {
+  background: white;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5em 0 1em;
+  row-gap: 0.75em;
+}
+
+.main__title {
+  padding: 0 1em;
+}
+
+@media (min-width: 768px) {
+  .main__body {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main__body {
+    max-width: 700px;
+  }
+}

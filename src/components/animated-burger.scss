@@ -1,0 +1,41 @@
+@mixin animated-burger($burgerSize, $lineWidth, $lineHeight, $linesGap) {
+  position: relative;
+  width: $burgerSize;
+  height: $burgerSize;
+
+  & > div {
+    transition: 0.3s;
+    background: black;
+    border-radius: calc($lineHeight / 2);
+    position: absolute;
+    left: calc(($burgerSize - $lineWidth) / 2);
+    top: calc(($burgerSize - $lineHeight) / 2);
+    width: $lineWidth;
+    height: $lineHeight;
+  }
+
+  & > div:first-child {
+    top: calc($burgerSize / 2) - $lineHeight * 0.5 - $linesGap;
+  }
+
+  & > div:last-child {
+    top: calc($burgerSize / 2) - $lineHeight * 0.5 + $linesGap;
+  }
+
+  &--opened > div:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  &--opened > div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  &--opened > div:first-child,
+  &--opened > div:last-child {
+    top: calc(($burgerSize - $lineHeight) / 2);
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}

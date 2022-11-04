@@ -1,0 +1,33 @@
+@import 'Style/classes/text-overflow.scss';
+@import 'Style/classes/hover-border.scss';
+
+.site-nav__link {
+  @extend .text-overflow;
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .site-nav__link {
+    padding: 0 25px;
+    font-size: 18px;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .site-nav__item {
+    @include hover-border(1px, black);
+  }
+
+  .site-nav__link {
+    padding: 0 0.5em;
+    line-height: 2em;
+  }  
+}

@@ -1,0 +1,51 @@
+@mixin hover-border($borderWidth: 1px, $borderColor: black) {
+  position: relative;
+
+  &::before,
+  &::after,
+  & > *::before,
+  & > *::after {
+    transition: transform 0.3s;
+    background: $borderColor;
+    position: absolute;
+    content: "";
+  }
+
+  &::before,
+  &::after {
+    transform-origin: top left;
+    left: 0;
+    top: 0;
+  }
+
+  & > *::before,
+  & > *::after {
+    transform-origin: bottom right;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::before,
+  & > *::before {
+    width: 100%;
+    height: $borderWidth;
+    transform: scaleX(0);
+  }
+
+  &::after,
+  & > *::after {
+    width: $borderWidth;
+    height: 100%;
+    transform: scaleY(0);
+  }
+
+  &:hover::before,
+  &:hover > *::before {
+    transform: scaleX(1);
+  }
+
+  &:hover::after,
+  &:hover > *::after {
+    transform: scaleY(1);
+  }
+}

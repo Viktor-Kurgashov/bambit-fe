@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Karmatic Arcade';
+  src: url('Fonts/ka1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.made-by {
+  font-family: 'Karmatic Arcade';
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.made-by__caption {
+  white-space: nowrap;
+  font-size: 0.75em;
+}
+
+.made-by__link {
+  border: 1px solid black;
+  font-size: 1.25em;
+  padding: 0.33em;
+}

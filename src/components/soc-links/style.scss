@@ -1,0 +1,80 @@
+$bg-whatsapp: #48C95F;
+$bg-tg: #27A6E5;
+$bg-inst: radial-gradient(
+  230.93% 230.93% at 102.01% 2.03%,
+  #F9ED32 0%,
+  #EE2A7B 36%,
+  #D22A8A 44%,
+  #8B2AB2 60%,
+  #1B2AF0 83%,
+  #002AFF 88%
+);
+$bg-vk: #0077FF;
+
+
+
+.soc-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+@media (max-width: 1023px) {
+  .soc-link {
+    color: white;
+
+    &:first-child { background: $bg-whatsapp; }
+
+    &:nth-child(2) { background: $bg-tg; }
+
+    &:nth-child(3) { background: $bg-inst; }
+
+    &:last-child { background: $bg-vk; }
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+  .soc-link {
+    border: 1px solid black;
+
+    &::after {
+      content: "";
+      transition: transform .3s, color .3s;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:first-child::after { background: $bg-whatsapp; }
+
+    &:nth-child(2)::after { background: $bg-tg; }
+
+    &:nth-child(3)::after { background: $bg-inst; }
+
+    &:last-child::after { background: $bg-vk; }
+
+    &:hover::after { transform: scaleY(1); }
+
+    & > svg {
+      transition: transform .3s, color .3s;
+      z-index: 2;
+    }
+
+    &:hover > svg {
+      transform: rotateY(360deg);
+      color: white;
+    }
+  }
+}

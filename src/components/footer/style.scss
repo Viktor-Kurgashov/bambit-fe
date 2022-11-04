@@ -1,0 +1,24 @@
+@import 'Style/classes/section.scss';
+
+body {
+  position: relative;
+  padding-bottom: 4.5em;
+}
+
+.footer {
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__body {
+  @extend .section;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4.5em;
+  padding: 0.5em 0;
+  column-gap: 0.5em;
+}

@@ -1,0 +1,28 @@
+body {
+  font: 400 16px/1.5em 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font: 500 24px/1.4em 'Ubuntu', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font: 500 19px/1.5em 'Ubuntu', sans-serif;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 21px;
+  }
+}

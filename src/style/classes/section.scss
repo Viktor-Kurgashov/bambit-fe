@@ -1,0 +1,17 @@
+.section {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    max-width: 1200px;
+  }
+}
