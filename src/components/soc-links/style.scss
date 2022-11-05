@@ -65,13 +65,17 @@ $bg-vk: #0077FF;
 
     &:last-child::after { background: $bg-vk; }
 
-    &:hover::after { transform: scaleY(1); }
+    &:focus::after,
+    &:hover::after {
+      transform: scaleY(1);
+    }
 
     & > svg {
       transition: transform .3s, color .3s;
       z-index: 2;
     }
 
+    &:focus > svg,
     &:hover > svg {
       transform: rotateY(360deg);
       color: white;

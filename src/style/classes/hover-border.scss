@@ -39,12 +39,16 @@
     transform: scaleY(0);
   }
 
+  &:focus::before,
   &:hover::before,
+  &:focus > *::before,
   &:hover > *::before {
     transform: scaleX(1);
   }
 
+  &:focus::after,
   &:hover::after,
+  &:focus > *::after,
   &:hover > *::after {
     transform: scaleY(1);
   }

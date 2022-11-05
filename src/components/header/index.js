@@ -5,4 +5,4 @@ import './style.scss';
 
 import logo from './logo.png';
 
-document.querySelector('.header__logo-link').src = logo;
+document.querySelector('.header__logo').src = logo;

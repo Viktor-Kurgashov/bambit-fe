@@ -19,15 +19,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: 2px;
     flex-grow: 1;
   }
 
-  .site-nav__item {
-    @include hover-border(1px, black);
-  }
-
   .site-nav__link {
+    @include hover-border(1px, black);
     padding: 0 0.5em;
     line-height: 2em;
-  }  
+  }
 }

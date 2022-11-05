@@ -1,4 +1,5 @@
 @import 'Style/classes/section.scss';
+@import 'Style/classes/hover-border.scss';
 @import 'Components/animated-burger.scss';
 @import 'Components/modal/style.scss';
 
@@ -18,6 +19,11 @@
 }
 
 .header__logo-link {
+  @include hover-border(1px, black);
+  padding: 0 0.25em;
+}
+
+.header__logo {
   max-width: 7em;
   min-height: 2em;
   object-fit: contain;
@@ -59,7 +65,7 @@
 
 
 @media (min-width: 1024px) {
-  .header__logo-link {
+  .header__logo {
     max-width: 8em;
   }
 

@@ -29,6 +29,7 @@ const modal = {
     if (!window.matchMedia('(max-width: 1023px)').matches) {
       modal.hide();
       window.removeEventListener('resize', modal.clear);
+      console.warn('clear');
     }
   },
 
@@ -37,8 +38,10 @@ const modal = {
       if (!this.active) {
         this.show();
         window.addEventListener('resize', this.clear);
+      } else {
+        this.hide();
+        window.removeEventListener('resize', this.clear);
       }
-      else this.hide();
     });
   },
 };
